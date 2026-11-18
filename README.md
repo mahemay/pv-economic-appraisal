@@ -1,6 +1,6 @@
 # PV Economic Appraisal
 
-[![Python](https://img.shields.io/badge/Python-3.9%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/Python-3.1%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-see%20repository-lightgrey.svg)](#license)
 
 A transparent economic screening model for grid-connected solar photovoltaic (PV) investments. The project evaluates annual energy production and operating cash flows, then reports net present value (NPV), internal rate of return (IRR), and simple and discounted payback. It also provides a 5 × 5 NPV sensitivity analysis over capital cost and electricity price.
@@ -79,7 +79,7 @@ $$\mathrm{CAPEX}=P C, \qquad G_t=P Y(1-d)^{t-1}, \quad t=1,\ldots,N.$$
 
 Annual revenue, O&M, and operating net cash flow are:
 
-$$\mathrm{Revenue}_t=G_t p, \qquad \mathrm{O\&M}_t=m\,\mathrm{CAPEX}, \qquad \mathrm{NCF}_t=\mathrm{Revenue}_t-\mathrm{O\&M}_t.$$
+$$\mathrm{Revenue}_t=G_t p, \qquad \text{O\&M}_t=m\,\mathrm{CAPEX}, \qquad \mathrm{NCF}_t=\mathrm{Revenue}_t-\text{O\&M}_t.$$
 
 The initial cash flow is $\mathrm{NCF}_0=-\mathrm{CAPEX}$. NPV discounts end-of-year cash flows:
 
@@ -151,7 +151,7 @@ For any reported analysis, record the exact inputs, Python version, dependency v
 
 **Mohammad Akbarzadeh**  
 Ph.D. Candidate in Resource Economics  
-Ferdowsi University of Mashhad 
+Ferdowsi University of Mashhad
 
 ## License
 
