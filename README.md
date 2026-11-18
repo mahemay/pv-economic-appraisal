@@ -79,7 +79,7 @@ $$\mathrm{CAPEX}=P C, \qquad G_t=P Y(1-d)^{t-1}, \quad t=1,\ldots,N.$$
 
 Annual revenue, O&M, and operating net cash flow are:
 
-$$\mathrm{Revenue}_t=G_t p, \qquad \text{O\&M}_t=m\,\mathrm{CAPEX}, \qquad \mathrm{NCF}_t=\mathrm{Revenue}_t-\text{O\&M}_t.$$
+$$\mathrm{Revenue}_t=G_t p, \qquad M_t=m\,\mathrm{CAPEX}, \qquad \mathrm{NCF}_t=\mathrm{Revenue}_t-M_t.$$
 
 The initial cash flow is $\mathrm{NCF}_0=-\mathrm{CAPEX}$. NPV discounts end-of-year cash flows:
 
