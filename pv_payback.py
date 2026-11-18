@@ -2,17 +2,17 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # -----------------------------
-# Project assumptions
+# Project assumptions (IRENA benchmarks)
 # -----------------------------
-capacity_kw = 10
-specific_yield = 1700          # kWh per kW per year
-investment_cost = 8500         # currency units per kW
-annual_om_cost = 0.02          # share of initial investment
-electricity_price = 0.12      # currency units per kWh
-degradation = 0.005            # annual generation degradation
+capacity_kw = 10                       # System capacity in kW
+specific_yield = 1700                  # kWh per kW per year
+investment_cost = 650                  # USD per kW (IRENA 2024/2026 benchmark)
+annual_om_cost = 0.015                 # 1.5% of initial investment
+electricity_price = 0.09               # USD per kWh (Tariff / Electricity price)
+degradation = 0.005                    # annual generation degradation (0.5%)
 project_life = 20
 
-discount_rate = 0.10
+discount_rate = 0.08                   # 8% discount rate
 
 # -----------------------------
 # Annual calculations
@@ -48,7 +48,7 @@ def calculate_payback(cumulative_values):
 simple_payback = calculate_payback(cumulative_cash_flow)
 discounted_payback = calculate_payback(cumulative_discounted_cash_flow)
 
-print(f"Initial investment: {initial_investment:,.0f}")
+print(f"Initial investment: ${initial_investment:,.0f}")
 print(f"Annual generation: {annual_generation:,.0f} kWh")
 print(f"Simple payback period: {simple_payback} years")
 print(f"Discounted payback period: {discounted_payback} years")
@@ -63,8 +63,8 @@ plt.plot(years, cumulative_cash_flow, marker="o", label="Simple cash flow")
 plt.plot(years, cumulative_discounted_cash_flow, marker="s", label="Discounted cash flow")
 plt.axhline(0, color="black", linewidth=1)
 plt.xlabel("Year")
-plt.ylabel("Cumulative cash flow")
-plt.title("Cumulative Cash Flow of a Small-Scale PV Project")
+plt.ylabel("Cumulative Cash Flow (USD)")
+plt.title("Cumulative Cash Flow of a Small-Scale PV Project (IRENA Benchmarks)")
 plt.legend()
 plt.grid(alpha=0.3)
 plt.tight_layout()
